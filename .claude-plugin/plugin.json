@@ -1,0 +1,9 @@
+{
+  "name": "roleflow",
+  "version": "0.1.1",
+  "description": "Flow hai vai Leader, Planner cho Claude Code: /roleflow:start, /roleflow:done, /roleflow:pause, /roleflow:codeplan, /roleflow:reviewplan cùng bộ luật và agent đi kèm.",
+  "author": {
+    "name": "quangcine"
+  },
+  "license": "MIT"
+}

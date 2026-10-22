@@ -1,0 +1,14 @@
+{
+  "name": "roleflow",
+  "description": "Marketplace của plugin flow hai vai Leader, Planner cho Claude Code.",
+  "owner": {
+    "name": "quangcine"
+  },
+  "plugins": [
+    {
+      "name": "roleflow",
+      "source": "./",
+      "description": "Flow hai vai Leader, Planner cho Claude Code: /roleflow:start, /roleflow:done, /roleflow:pause, /roleflow:codeplan, /roleflow:reviewplan cùng bộ luật và agent đi kèm."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+# Kho tài liệu ở gốc workspace: danh sách trắng.
+# `/*` chặn mọi thứ ở gốc (repo code, tệp tạm, .DS_Store...), rồi mở lại từng mục.
+/*
+!/.gitignore
+!/0*_*/
+!/11_DEBT/
+!/CLAUDE.md
+!/AGENTS.md
+!/.claude/
+/.claude/*
+!/.claude/skills/
+
+# Cây 12: `08_SHARE`, `09_REFERENCE`, `10_EXPORT`, `12_TRASH`, `06_REPORT/CodePlan`, `06_REPORT/Test` chặn trọn.
+# `10_EXPORT/`, `12_TRASH/` đã bị `/*` chặn (⛔ không có dòng `!`); 4 dòng dưới đứng sau `!/0*_*/` nên thắng nó.
+/08_SHARE/
+/09_REFERENCE/
+/06_REPORT/CodePlan/
+/06_REPORT/Test/
+
+# Mẫu chung, ⛔ không ghi đường cây.
+# Đặt SAU các dòng `!` ở đầu tệp để chặn được cả trong thư mục đã mở lại.
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+.next/
+.open-next/
+out/
+dist/
+coverage/
+__pycache__/
+*.pyc
+*.pem
+*.key
+*.p8
+*.p12
+*.jks
+*.mobileprovision
+.env
+.env.*
+.env*.local
+*.env
+.dev.vars
+.dev.vars.*
+.wrangler/
+.shot-*.png
+.snap-*.txt
+*.tsbuildinfo
+# Bản sao lưu tay
+*.bak*
