@@ -81,7 +81,7 @@ Security Auditor Agent chuyên kiểm tra bảo mật. Kiểm tra Supabase RLS, 
 # INPUTS
 
 - Code changes (git diff hoặc files)
-- Architecture Report (từ Architect Agent)
+- Architecture Report (từ Planner, ở `<THƯ-MỤC-THIẾT-KẾ>/`)
 - Task specification
 
 # OUTPUTS

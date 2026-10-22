@@ -7,7 +7,7 @@ description: Khởi tạo một DỰ ÁN APP MỚI theo cấu trúc chuẩn (câ
 
 Viết mọi văn bản bằng **tiếng Việt có dấu**.
 
-> 🔴 **PHẠM VI: chỉ dự án APP** (có code, database, deploy). Cây 11 thư mục dưới đây là cây của **app**, ⛔ KHÔNG phải cây dùng chung cho mọi loại dự án.
+> 🔴 **PHẠM VI: chỉ dự án APP** (có code, database, deploy). Cây 12 thư mục dưới đây là cây của **app**, ⛔ KHÔNG phải cây dùng chung cho mọi loại dự án.
 > ⚠️ Loại dự án khác có cây **hoàn toàn khác**, ⛔ đừng bê cây này sang.
 > 📌 Chưa chắc dự án thuộc loại nào thì **HỎI user trước**, ⛔ đừng suy từ tên.
 
@@ -24,7 +24,7 @@ Skill này làm **hai việc**, thiếu việc thứ hai là dự án mới sẽ
 
 **Nhóm A, bắt buộc để dựng cây:**
 1. **Tên dự án** và **slug** *(viết thường không dấu)*.
-2. **Gốc workspace** (`~/<Ten>Dev/`, là kho tài liệu) và **tên repo code** bên trong nó.
+2. **Gốc workspace** (`~/<GocDuAn>/`, là kho tài liệu) và **tên repo code** bên trong nó.
 3. **Một câu mô tả** dự án làm gì.
 
 **Nhóm B, bắt buộc để ghi vào `AGENTS.md`** *(thiếu cái nào thì để `(chưa có)` và ghi vào mục nợ, ⛔ đừng bịa)*:
@@ -71,7 +71,7 @@ Skill này làm **hai việc**, thiếu việc thứ hai là dự án mới sẽ
 
 ## Bước 5 · 🔴 KHAI DỰ ÁN VÀO `flow-projects.json` (⛔ đừng bỏ bước này)
 
-0. 🔴 Thêm dòng `"<Tên dự án>": "~/<Ten>Dev"` vào `~/.claude/flow-projects.json` (chưa có tệp thì tạo, dạng `{"Tên": "~/Gốc"}`; thiếu là `/roleflow:start` ra `KHONG_RO_DU_AN`); chỗ duy nhất giữ đường của ba lệnh vai.
+0. 🔴 Thêm dòng `"<Tên dự án>": "~/<GocDuAn>"` vào `~/.claude/flow-projects.json` (chưa có tệp thì tạo, dạng `{"Tên": "~/Gốc"}`; thiếu là `/roleflow:start` ra `KHONG_RO_DU_AN`); chỗ duy nhất giữ đường của ba lệnh vai.
 
 ## Bước 6 · Verify
 

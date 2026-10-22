@@ -76,12 +76,12 @@ Supabase Expert Agent chuyên Supabase. Review Supabase client/server usage, dat
 - General code quality
 - Performance optimization (not Supabase-specific)
 - Security audit (that's Security Auditor job)
-- Architecture design (that's Architect job)
+- Architecture design (việc của Planner)
 
 # INPUTS
 
 - Code changes (git diff hoặc files)
-- Architecture Report (từ Architect Agent)
+- Architecture Report (từ Planner, ở `<THƯ-MỤC-THIẾT-KẾ>/`)
 - Database schema
 - Task specification
 

@@ -78,7 +78,7 @@ Database Architect Agent chuyên thiết kế PostgreSQL schema. Thiết kế sc
 
 # INPUTS
 
-- Architecture Report (từ Architect Agent)
+- Architecture Report (từ Planner, ở `<THƯ-MỤC-THIẾT-KẾ>/`)
 - Existing database schema
 - Feature requirements
 - Performance requirements

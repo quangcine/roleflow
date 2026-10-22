@@ -139,7 +139,11 @@ def load_roots(path):
     if not isinstance(data, dict) or not all(
             isinstance(k, str) and isinstance(v, str) and v.strip() for k, v in data.items()):
         die(f'FLOW_PROJECTS_HONG {path}: cần một object {{"Tên": "~/Gốc"}}, giá trị là chuỗi khác rỗng', 2)
-    return {name: os.path.expanduser(root) for name, root in data.items()}
+    roots = {name: os.path.expanduser(root) for name, root in data.items()}
+    rel = [name for name, root in roots.items() if not os.path.isabs(root)]
+    if rel:
+        die(f'FLOW_PROJECTS_HONG {path}: gốc phải là đường tuyệt đối hoặc bắt đầu bằng ~/ ({", ".join(rel)})', 2)
+    return roots
 
 
 def find_project():
@@ -147,13 +151,18 @@ def find_project():
     if override:
         return 'TEST', os.path.realpath(override)
     cwd = os.path.realpath(os.getcwd())
-    path = os.environ.get('ACTIVEROLE_PROJECTS') or PROJECTS_FILE
+    path = os.path.expanduser(os.environ.get('ACTIVEROLE_PROJECTS') or PROJECTS_FILE)
+    # Gốc lồng nhau thì lấy gốc sâu nhất chứa cwd, ⛔ không theo thứ tự khai trong tệp.
+    hits = []
     for name, root in (load_roots(path) or {}).items():
         real = os.path.realpath(root)
         if cwd == real or cwd.startswith(real + os.sep):
-            return name, real
+            hits.append((len(real), name, real))
+    if hits:
+        _, name, real = max(hits)
+        return name, real
     die(f'KHONG_RO_DU_AN {cwd}\n'
-        f'Thêm dòng "<Tên dự án>": "<gốc, ví dụ ~/TenDev>" vào ~/.claude/flow-projects.json rồi chạy lại.', 2)
+        f'Thêm dòng "<Tên dự án>": "<gốc, ví dụ ~/TenDev>" vào {path} rồi chạy lại.', 2)
 
 
 def book_path(root, name):

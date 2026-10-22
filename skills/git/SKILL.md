@@ -1,6 +1,6 @@
 ---
 name: git
-description: Quy trình deploy an toàn (khung DÙNG CHUNG mọi dự án), chạy khi user ra lệnh "Git" (db push TRƯỚC → rồi commit+git push cả repo code lẫn kho tài liệu ở gốc) hoặc "Push" (CHỈ supabase db push, không git). BẮT BUỘC kiểm tài khoản trước mỗi lệnh đẩy, db push trước git, quét secret, chạy cửa verify của dự án, commit thẳng main. Dùng khi user nói "Git", "Push", "db push", "commit", "đẩy lên", "push DB".
+description: Quy trình deploy an toàn (khung DÙNG CHUNG mọi dự án), chạy khi user ra lệnh "Git" (db push TRƯỚC → rồi commit+git push cả repo code lẫn kho tài liệu ở gốc) hoặc "Push" (CHỈ supabase db push, không git). BẮT BUỘC kiểm tài khoản trước mỗi lệnh đẩy, db push trước git, quét secret, chạy cửa verify của dự án, commit thẳng main. Dùng khi user nói "Git", "Push", "db push", "commit", "đẩy lên", "push DB". ⛔ Không dùng khi user gõ một lệnh đẩy đã có skill riêng.
 ---
 
 # Git/Deploy: DB push TRƯỚC, git SAU
@@ -41,7 +41,7 @@ Lấy từ bản riêng của dự án, hoặc từ `CLAUDE.md` của nó. Thi�
 
 ## 🔴 CỬA #0 · KIỂM TÀI KHOẢN NGAY TRƯỚC MỖI LỆNH ĐẨY
 
-> Một máy này đăng nhập **nhiều tài khoản song song**. Deploy nhầm account là lỗi **KHÔNG hoàn tác được**: một phiên đã dựng nguyên hạ tầng lên nhầm account, Cloudflare ⛔ không chuyển tài nguyên giữa 2 account nên phải xoá tạo lại từ đầu.
+> Một máy có thể đăng nhập **nhiều tài khoản song song**. Deploy nhầm account là lỗi **KHÔNG hoàn tác được**: một phiên đã dựng nguyên hạ tầng lên nhầm account, Cloudflare ⛔ không chuyển tài nguyên giữa 2 account nên phải xoá tạo lại từ đầu.
 
 - **Kiểm rồi mới đẩy, không kiểm thì không đẩy.** Kết quả kiểm phải **in ra cho user thấy**, ⛔ không tự nhủ trong đầu.
 - ⚠️ **Kiểm MỖI lệnh, ⛔ đừng cache kết quả cũ.** Token-per-command: lệnh TRƯỚC đúng account KHÔNG bảo đảm lệnh SAU đúng, shell không giữ trạng thái.
@@ -98,7 +98,7 @@ Grep các file SẼ commit (mới + sửa) tìm **GIÁ TRỊ** secret:
 
 ## 📚 KHO TÀI LIỆU · mỗi gốc workspace là một kho Git riêng
 
-**gốc workspace là kho tài liệu** (`01_IDEA/` tới `11_DEBT/`, `CLAUDE.md`, `AGENTS.md`, `.claude/skills/`), tách khỏi repo code.
+**Gốc workspace là kho tài liệu** (`01_IDEA/` tới `11_DEBT/`, `CLAUDE.md`, `AGENTS.md`, `.claude/skills/`), tách khỏi repo code.
 **Lệnh "Git" commit, push CẢ repo code lẫn kho tài liệu** của dự án đang làm (bên nào ⛔ không có thay đổi thì bỏ qua bên đó).
 
 - 🔴 **Kho code, kho tài liệu, tài khoản, lệnh kiểm tài khoản của từng dự án ghi ở PHẦN RIÊNG của dự án** (bản riêng skill `roleflow:git`,

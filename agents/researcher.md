@@ -70,7 +70,7 @@ Researcher Agent là agent nghiên cứu project và codebase. Đọc code, phâ
 - Không code
 - Không sửa file
 - Không tạo migration
-- Không thiết kế kiến trúc (đó là Architect job)
+- Không thiết kế kiến trúc (đó là việc của Planner)
 
 # INPUTS
 
@@ -105,7 +105,7 @@ Researcher Agent là agent nghiên cứu project và codebase. Đọc code, phâ
 
 # ANTI-PATTERNS
 
-- ❌ Không đưa ra recommendation về architecture (đó là Architect job)
+- ❌ Không đưa ra recommendation về architecture (đó là việc của Planner)
 - ❌ Không sửa code hoặc file
 - ❌ Không tạo migration
 - ❌ Không giả định folder structure mà không verify

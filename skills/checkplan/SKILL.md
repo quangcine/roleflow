@@ -31,7 +31,7 @@ Cửa verify tĩnh, nơi verify artifact: đọc mục tương ứng ở `CLAUDE
 ## Bước 1 · Đọc mục lục, phân loại
 Đọc `05_PLANS/Plan_Pass.md`. ⛔ Không quét đệ quy `Plan_List/`, ⛔ không đọc `Plan_Done.md`, `Plan_Cancel.md`, `Plan_Debt.md` *(trừ khi user hỏi)*.
 Mỗi dòng: theo link, **chỉ `rg`, `head`** lấy dòng trạng thái, `Hoàn thành Plan lúc`, `Nhật ký Code`, đếm `- [x]` với `- [ ]`
-⚡ ⛔ không `Read` trọn tệp Plan (nhiều tệp 90k tới 160k ký tự). Ô Đang cầm có 🔨 *(Leader đang code)* thì bỏ qua, trừ khi user chỉ định.
+⚡ ⛔ không `Read` trọn tệp Plan (tệp Plan thường rất dài). Ô Đang cầm có 🔨 *(Leader đang code)* thì bỏ qua, trừ khi user chỉ định.
 - **A. Nghi ĐÃ XONG**: trạng thái nói code xong, tick gần hết, hoặc chỉ còn ô test in-app, Git, vận hành user (các ô này ⛔ không chặn Done).
 - **B. Code MỘT PHẦN**: còn pha **code** thật chưa làm.
 - **C. Chỉ THIẾT KẾ**: chưa code.

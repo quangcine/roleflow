@@ -7,7 +7,7 @@ description: "Lập kế hoạch một MODULE LỚN (nhiều Plan con): điều 
 
 Viết mọi văn bản bằng **tiếng Việt đủ dấu**. Đây là quy trình ĐIỀU PHỐI (trên `/plan`): module lớn → **1 Master hub + N sub-plan** + khảo sát current-state + Q&A chốt thiết kế. **Chỉ đọc + lập kế hoạch**, KHÔNG tự code (trừ khi user chuyển sang thực thi ở session riêng).
 
-> Skill này chỉ THAM CHIẾU các quy ước đã có, ⛔ KHÔNG lặp lại: **đặt câu hỏi** và **kỷ luật deploy** theo `~/.claude/CLAUDE.md` (chép từ mẫu `templates/CLAUDE.md` của plugin) · tiêu chí *"Plan XONG = code xong"* và luật mục lục theo skill `checkplan` · **kỷ luật token/MCP**: query targeted, ⛔ không full-dump.
+> Skill này chỉ THAM CHIẾU các quy ước đã có, ⛔ KHÔNG lặp lại: **đặt câu hỏi** và **kỷ luật deploy** theo `~/.claude/CLAUDE.md` (chép từ mẫu `templates/CLAUDE.md` của plugin) · tiêu chí *"Plan XONG = code xong"* và luật mục lục theo skill `roleflow:checkplan` · **kỷ luật token/MCP**: query targeted, ⛔ không full-dump.
 
 ## Nguyên tắc xuyên suốt
 - **KHÔNG BỊA** tên hàm/view/cột/route: mọi tiền-đề trong Plan phải đến từ khảo sát current-state THẬT (bước ②).

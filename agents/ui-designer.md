@@ -71,7 +71,7 @@ UIDesigner thiết kế & review giao diện theo chuẩn UI của dự án. Áp
 **Out-of-scope:**
 - Không code / không sửa file source
 - Không tạo migration / không đụng DB
-- Không thiết kế kiến trúc module (Architect job)
+- Không thiết kế kiến trúc module (việc của Planner)
 - Không tự đặt số chuẩn mới (đề xuất user sửa memory trước)
 
 # INPUTS
